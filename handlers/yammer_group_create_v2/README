@@ -1,0 +1,41 @@
+== Yammer Group Create
+This handler creates a new group on your Yammer network.
+
+=== Parameters
+[Group Name]
+  The name of the group that you want to create.
+[Private]
+  True if this is a private group and false if it will be public.
+
+=== Results
+This handler returns no results.
+
+==== Sample Configuration
+Group Name:              Sample Group
+Private:                 true
+
+=== Detailed Description
+This handler creates a new group on the domain that the inputted access token
+(as an info value) is tied to. If you want the group to be private, input true
+for the "Private" parameter. If not, the group will just be a standard public
+group. Any errors that happen in this process will be caught and re-raised by
+the handler.
+
+===How to retrieve your Access Token
+* These instructions can also be found on developer.yammer.com/authentication
+under client-side authentication
+  1. Start by creating a client application at https://www.yammer.com/client_applications
+  2. Fill in the required information and create the application
+  3. Using the client id you retrieved from the application, paste this url into
+     your browser, making sure to replace [:client_id]:
+     - https://www.yammer.com/dialog/oauth?client_id=[:client_id]&redirect_uri=127.0.0.1&response_type=token
+  4. After submitting that page and authorizing the application, look in the url
+     to find your access token. That url will look like:
+     - https://www.yammer.com127.0.0.1/#access_token=[:access_token]
+  5. Paste this Access Token into your info values and you will be all set!
+
+If you have already registered Kinetic Task with your Yammer network, or if you
+receive a message stating that the "Application Name is already in use", you
+can view your list of registered applications at:
+  https://www.yammer.com/client_applications
+Click on your application details to get your client id and client secret.

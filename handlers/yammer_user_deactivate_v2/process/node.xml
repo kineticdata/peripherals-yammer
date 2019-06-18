@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<taskDefinition id="yammer_user_deactivate" name="Yammer User Deactivate" schema_version="1.0" version="2">
+    <author>support@kineticdata.com</author>
+    <description>This handler deactivates a member of your Yammer network.</description>
+    <helpurl>http://ktc.kineticdata.com/handler/yammer_user_deactivate/2</helpurl>
+    <visible>true</visible>
+    <deferrable>false</deferrable>
+    <parameters>
+        <parameter id="user_email" label="User Email" required="true"
+            tooltip="The email address of the user that should be deactivated."/>
+    </parameters>
+    <handler name="yammer_user_deactivate" version="2">
+        <infos>
+            <info name="access_token">&lt;%= @info['access_token'] %&gt;</info>
+            <info name="enable_debug_logging">&lt;%= @info['enable_debug_logging'] %&gt;</info>
+        </infos>
+        <parameters>
+            <parameter name="user_email">&lt;%= @parameters['user_email'] %&gt;</parameter>
+        </parameters>
+    </handler>
+    <results format="xml">
+    </results>
+</taskDefinition>

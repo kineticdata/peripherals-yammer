@@ -1,0 +1,6 @@
+Yammer Group Create V1 (2012-06-19)
+* Initial version. See README for details.
+
+Yammer Group Create V2 (2013-09-06)
+* Changed authentication method as well as transitioned from using the Yammer
+gem to using the REST Client gem.

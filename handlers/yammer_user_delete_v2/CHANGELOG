@@ -1,0 +1,6 @@
+Yammer User Delete V1 (2012-08-02)
+* Initial version.  See README for details.
+
+Yammer User Delete V2 (2013-09-09)
+* Changed authentication method as well as transitioned from using the Yammer
+gem to using the REST Client gem.

@@ -1,0 +1,6 @@
+Yammer Message Post V1 (2012-06-21)
+* Initial version.  See README for details.
+
+Yammer Message Post V2 (2013-09-06)
+* Changed authentication method as well as transitioned from using the yammer
+gem to using the REST Client gem.

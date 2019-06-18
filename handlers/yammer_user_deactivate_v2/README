@@ -1,0 +1,42 @@
+== Yammer User Deactivate
+This handler deactivates a member of your Yammer network.
+
+=== Parameters
+[User Email]
+  The email address of the user that should be deactivated.
+
+=== Results
+This handler returns no results.
+
+==== Sample Configuration
+User Email:                 david.deactivate@acme.com
+
+=== Detailed Description
+This handler deactivates a user of your Yammer network.  After searching and
+finding the user id that cooresponds to the inputted user email, the user will
+be deactivated.  If a user with the specified email does not exist, the request
+will be ignored. Any other errors that happen during this process will also be
+caught and re-raised by the handler.
+
+Note: This handler requires a verified admin account in a paid Yammer network!
+(If you are an admin and still getting an error with the message "Attempt to
+access a protected resource failed" make sure that you are also verified.)
+
+===How to retrieve your Access Token
+* These instructions can also be found on developer.yammer.com/authentication
+under client-side authentication
+  1. Start by creating a client application at https://www.yammer.com/client_applications
+  2. Fill in the required information and create the application
+  3. Using the client id you retrieved from the application, paste this url into
+     your browser, making sure to replace [:client_id]:
+     - https://www.yammer.com/dialog/oauth?client_id=[:client_id]&redirect_uri=127.0.0.1&response_type=token
+  4. After submitting that page and authorizing the application, look in the url
+     to find your access token. That url will look like:
+     - https://www.yammer.com127.0.0.1/#access_token=[:access_token]
+  5. Paste this Access Token into your info values and you will be all set!
+
+If you have already registered Kinetic Task with your Yammer network, or if you
+receive a message stating that the "Application Name is already in use", you
+can view your list of registered applications at:
+  https://www.yammer.com/client_applications
+Click on your application details to get your client id and client secret.
